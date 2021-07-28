@@ -1,0 +1,17 @@
+/*** TABLE GAME ***/
+tr,
+td {
+	border: 1px solid black;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+}
+.rounded {
+	border-radius: 50%;
+}
+.stable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}

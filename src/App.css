@@ -1,38 +1,57 @@
+/*** GENERAL ***/
 .App {
-  text-align: center;
+	height: 85vh;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.m-25 {
+	margin: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.green {
+	background: rgb(9, 160, 9);
+}
+.red {
+	background: rgb(190, 38, 38);
+}
+.blue {
+	background: rgb(45, 149, 209);
+}
+.yellow {
+	background: rgb(223, 223, 12);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h3 {
+	text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/*** FLEXBOX ***/
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-column {
+	flex-direction: column;
+}
+.space-around {
+	justify-content: space-around;
+}
+.stretch {
+	align-self: stretch;
+}
+.flex-start {
+	align-self: flex-start;
+}
+.flex-end {
+	align-self: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*** PAWN ***/
+.pawn {
+	width: 15px;
+	height: 15px;
+	border: 5px solid black;
+	border-radius: 50%;
 }
