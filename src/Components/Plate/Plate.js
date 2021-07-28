@@ -22,7 +22,7 @@ export default class Plate extends Component {
 					<tr>
 						<td className="rounded green" colSpan="6" rowSpan="6">
 							<div className="stable" id="stable-green">
-								{this.props.stableGreen.map((pawnStable) => (
+								{this.props.stables[0].map((pawnStable) => (
 									<div className="pawn green m-25" id={`pawn-green-${pawnStable}`}></div>
 								))}
 							</div>

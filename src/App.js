@@ -10,10 +10,16 @@ export default class App extends Component {
 		this.state = {
 			stableGreen: [1, 2, 3, 4],
 			pawns: [
-				["stable-green", "stable-green", "stable-green", "stable-green"],
-				["stable-red", "stable-red", "stable-red", "stable-red"],
-				["stable-yellow", "stable-yellow", "stable-yellow", "stable-yellow"],
-				["stable-blue", "stable-blue", "stable-blue", "stable-blue"],
+				["stable", "stable", "stable", "stable"],
+				["stable", "stable", "stable", "stable"],
+				["stable", "stable", "stable", "stable"],
+				["stable", "stable", "stable", "stable"],
+			],
+			stables: [
+				[1, 2, 3, 4],
+				[1, 2, 3, 4],
+				[1, 2, 3, 4],
+				[1, 2, 3, 4],
 			],
 			stableRed: [1, 2, 3, 4],
 			stableYellow: [1, 2, 3, 4],
@@ -26,30 +32,8 @@ export default class App extends Component {
 
 	tossDice = (dieOneValue) => {
 		if (dieOneValue === 6) {
-			if (this.state.playerToPlay === 0) {
-				let pawnTemp = [...this.state.pawns];
-				pawnTemp[0].splice(0, 1, "green-1");
-				this.setState({
-					stableGreen: [2, 3, 4],
-				});
-			} else if (this.state.playerToPlay === 1) {
-				let pawnTemp = [...this.state.pawns];
-				pawnTemp[1].splice(0, 1, "red-1");
-				this.setState({
-					stableRed: [2, 3, 4],
-				});
-			} else if (this.state.playerToPlay === 2) {
-				let pawnTemp = [...this.state.pawns];
-				pawnTemp[2].splice(0, 1, "blue-1");
-				this.setState({
-					stableBlue: [2, 3, 4],
-				});
-			} else if (this.state.playerToPlay === 3) {
-				let pawnTemp = [...this.state.pawns];
-				pawnTemp[3].splice(0, 1, "yellow-1");
-				this.setState({
-					stableYellow: [2, 3, 4],
-				});
+			if (this.state.stables[this.state.playerToPlay].length === 4) {
+				this.firstHorseLeaveStable();
 			}
 		}
 
@@ -64,6 +48,42 @@ export default class App extends Component {
 		});
 	};
 
+	firstHorseLeaveStable = () => {
+		if (this.state.playerToPlay === 0 && this.state.pawns[0][0] === "stable") {
+			let pawnTemp = [...this.state.pawns];
+			pawnTemp[0].splice(0, 1, "green-1");
+			let stablesTemp = [...this.state.stables];
+			stablesTemp[0].splice(0, 1);
+			this.setState({
+				stables: [...stablesTemp],
+			});
+		} else if (this.state.playerToPlay === 1 && this.state.pawns[1][0] === "stable") {
+			let pawnTemp = [...this.state.pawns];
+			pawnTemp[1].splice(0, 1, "red-1");
+			let stablesTemp = [...this.state.stables];
+			stablesTemp[0].splice(0, 1);
+			this.setState({
+				stables: [...stablesTemp],
+			});
+		} else if (this.state.playerToPlay === 2 && this.state.pawns[2][0] === "stable") {
+			let pawnTemp = [...this.state.pawns];
+			pawnTemp[2].splice(0, 1, "blue-1");
+			let stablesTemp = [...this.state.stables];
+			stablesTemp[0].splice(0, 1);
+			this.setState({
+				stables: [...stablesTemp],
+			});
+		} else if (this.state.playerToPlay === 3 && this.state.pawns[3][0] === "stable") {
+			let pawnTemp = [...this.state.pawns];
+			pawnTemp[3].splice(0, 1, "yellow-1");
+			let stablesTemp = [...this.state.stables];
+			stablesTemp[0].splice(0, 1);
+			this.setState({
+				stables: [...stablesTemp],
+			});
+		}
+	};
+
 	render() {
 		return (
 			<>
@@ -76,6 +96,7 @@ export default class App extends Component {
 						stableBlue={this.state.stableBlue}
 						stableRed={this.state.stableRed}
 						stableYellow={this.state.stableYellow}
+						stables={this.state.stables}
 						pawns={this.state.pawns}
 					/>
 				</div>
