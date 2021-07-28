@@ -4,13 +4,11 @@ import "./Dice.css";
 export default class Dice extends Component {
 	toss = () => {
 		let dieOneValue = Math.floor(Math.random() * 6 + 1);
-		this.props.tossDice(dieOneValue);
+		this.props.tossDice(6);
 	};
 
 	diceRender = () => {
-		console.log("test", this.props.diceValue);
 		if (this.props.diceValue === 1) {
-			console.log("dice 1");
 			return (
 				<div className="dice flex">
 					<div className="dot"></div>
