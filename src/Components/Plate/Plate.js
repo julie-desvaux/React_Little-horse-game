@@ -27,7 +27,7 @@ export default class Plate extends Component {
 								))}
 							</div>
 						</td>
-						<td className="green" id="green-14"></td>
+						<td className="invisible"></td>
 						<td className="red" id="red-1">
 							{this.findIndexOf("red-1") ? (
 								<div
@@ -40,86 +40,372 @@ export default class Plate extends Component {
 											? "pawn blue"
 											: "pawn yellow"
 									}
-									id={`pawn-reds-1`}
 								></div>
 							) : (
 								<p>.</p>
 							)}
 						</td>
-						<td className="red" id="red-2"></td>
+						<td className="invisible"></td>
 						<td className="rounded red" colSpan="6" rowSpan="6">
 							<div className="stable" id="stable-red">
-								{this.props.stableRed.map((pawnStable) => (
+								{this.props.stables[1].map((pawnStable) => (
 									<div className="pawn red m-25" id={`pawn-reds-${pawnStable}`}></div>
 								))}
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td className="green" id="green-13">
-							&nbsp;
+						<td className="green" id="green-12">
+							{this.findIndexOf("green-12") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-12") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-12") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-12") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
 						<td>1</td>
-						<td className="red">&nbsp;</td>
-					</tr>
-					<tr>
-						<td className="green" id="green-12">
-							&nbsp;
+						<td className="red">
+							{this.findIndexOf("red-2") ? (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-2") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-2") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-2") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							) : (
+								<p>D</p>
+							)}
 						</td>
-						<td>2</td>
-						<td className="red">&nbsp;</td>
 					</tr>
 					<tr>
 						<td className="green" id="green-11">
-							&nbsp;
+							{this.findIndexOf("green-11") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-11") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-11") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-11") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td>3</td>
-						<td className="red">&nbsp;</td>
+						<td>2</td>
+						<td className="red">
+							{this.findIndexOf("red-3") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-3") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-3") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-3") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
 						<td className="green" id="green-10">
-							&nbsp;
+							{this.findIndexOf("green-10") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-10") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-10") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-10") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td>4</td>
-						<td className="red">&nbsp;</td>
+						<td>3</td>
+						<td className="red">
+							{this.findIndexOf("red-4") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-4") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-4") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-4") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
 						<td className="green" id="green-9">
-							&nbsp;
+							{this.findIndexOf("green-9") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-9") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-9") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-9") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td>5</td>
-						<td className="red">&nbsp;</td>
+						<td>4</td>
+						<td className="red">
+							{this.findIndexOf("red-5") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-5") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-5") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-5") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
 						<td className="green" id="green-8">
-							&nbsp;
+							{this.findIndexOf("green-8") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-8") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-8") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-8") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td className="green" id="green-7">
-							&nbsp;
+						<td>5</td>
+						<td className="red">
+							{this.findIndexOf("red-6") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-6") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-6") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-6") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td className="green" id="green-6">
-							&nbsp;
-						</td>
-						<td className="green" id="green-5">
-							&nbsp;
-						</td>
-						<td className="green" id="green-4">
-							&nbsp;
+					</tr>
+					<tr>
+						<td className="invisible"></td>
+						<td className="green" id="green-2">
+							{this.findIndexOf("green-2") ? (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-2") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-2") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-2") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							) : (
+								<p>D</p>
+							)}
 						</td>
 						<td className="green" id="green-3">
-							&nbsp;
+							{this.findIndexOf("green-3") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-3") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-3") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-3") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
-						<td className="green" id="green-2">
-							&nbsp;
+						<td className="green" id="green-4">
+							{this.findIndexOf("green-4") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-4") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-4") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-4") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="green" id="green-5">
+							{this.findIndexOf("green-5") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-5") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-5") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-5") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="green" id="green-6">
+							{this.findIndexOf("green-6") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-6") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-6") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-6") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="green" id="green-7">
+							{this.findIndexOf("green-7") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("green-7") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("green-7") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("green-7") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
 						</td>
 						<td>6</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
-						<td className="red">&nbsp;</td>
+						<td className="red">
+							{this.findIndexOf("red-7") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-7") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-7") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-7") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="red">
+							{this.findIndexOf("red-8") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-8") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-8") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-8") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="red">
+							{this.findIndexOf("red-9") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-9") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-9") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-9") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="red">
+							{this.findIndexOf("red-10") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-10") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-10") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-10") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="red">
+							{this.findIndexOf("red-11") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-11") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-11") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-11") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="red">
+							{this.findIndexOf("red-12") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("red-12") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("red-12") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("red-12") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
 						<td className="green" id="green-1">
@@ -134,7 +420,6 @@ export default class Plate extends Component {
 											? "pawn blue"
 											: "pawn yellow"
 									}
-									id={`pawn-reds-1`}
 								></div>
 							) : (
 								<p>.</p>
@@ -173,63 +458,374 @@ export default class Plate extends Component {
 						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
-						<td className="yellow">&nbsp;</td>
+						<td className="invisible"></td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-12") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-12") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-12") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-12") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-11") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-11") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-11") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-11") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-10") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-10") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-10") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-10") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-9") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-9") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-9") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-9") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-8") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-8") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-8") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-8") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-7") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-7") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-7") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-7") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td>6</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-7") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-7") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-7") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-7") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="blue">
+							{this.findIndexOf("blue-6") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-6") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-6") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-6") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="blue">
+							{this.findIndexOf("blue-5") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-5") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-5") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-5") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="blue">
+							{this.findIndexOf("blue-4") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-4") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-4") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-4") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="blue">
+							{this.findIndexOf("blue-3") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-3") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-3") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-3") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
+						<td className="blue">
+							{this.findIndexOf("blue-2") ? (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-2") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-2") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-2") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							) : (
+								<p>D</p>
+							)}
+						</td>
 					</tr>
 					<tr>
 						<td className="rounded yellow" colSpan="6" rowSpan="6">
 							<div className="stable" id="stable-yellow">
-								{this.props.stableYellow.map((pawnStable) => (
+								{this.props.stables[3].map((pawnStable) => (
 									<div className="pawn yellow m-25" id={`pawn-yellow-${pawnStable}`}></div>
 								))}
 							</div>
 						</td>
-						<td className="yellow">&nbsp;</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-6") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-6") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-6") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-6") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td>5</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-8") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-8") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-8") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-8") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td className="rounded blue" colSpan="6" rowSpan="6">
 							<div className="stable" id="stable-blue">
-								{this.props.stableRed.map((pawnStable) => (
+								{this.props.stables[2].map((pawnStable) => (
 									<div className="pawn blue m-25" id={`pawn-blue-${pawnStable}`}></div>
 								))}
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-5") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-5") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-5") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-5") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td>4</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-9") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-9") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-9") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-9") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-4") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-4") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-4") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-4") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td>3</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-10") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-10") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-10") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-10") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-3") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-3") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-3") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-3") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 						<td>2</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-11") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-11") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-11") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-11") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
+						<td className="yellow">
+							{this.findIndexOf("yellow-2") ? (
+								<div
+									className={
+										this.props.pawns[0].indexOf("yellow-2") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("yellow-2") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("yellow-2") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							) : (
+								<p>D</p>
+							)}
+						</td>
 						<td>1</td>
-						<td className="blue">&nbsp;</td>
+						<td className="blue">
+							{this.findIndexOf("blue-1") && (
+								<div
+									className={
+										this.props.pawns[0].indexOf("blue-1") !== -1
+											? "pawn green"
+											: this.props.pawns[1].indexOf("blue-1") !== -1
+											? "pawn red"
+											: this.props.pawns[2].indexOf("blue-1") !== -1
+											? "pawn blue"
+											: "pawn yellow"
+									}
+								></div>
+							)}
+						</td>
 					</tr>
 					<tr>
-						<td className="yellow">&nbsp;</td>
+						<td className="invisible"></td>
 						<td className="yellow">
 							{this.findIndexOf("yellow-1") ? (
 								<div
@@ -248,7 +844,7 @@ export default class Plate extends Component {
 								<p>.</p>
 							)}
 						</td>
-						<td className="blue">&nbsp;</td>
+						<td className="invisible"></td>
 					</tr>
 				</tbody>
 			</table>

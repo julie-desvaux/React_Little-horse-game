@@ -15,3 +15,7 @@ td {
 	align-items: center;
 	flex-wrap: wrap;
 }
+
+.invisible {
+	border: none;
+}
