@@ -4,7 +4,7 @@ import "./Dice.css";
 export default class Dice extends Component {
 	toss = () => {
 		let dieOneValue = Math.floor(Math.random() * 6 + 1);
-		this.props.tossDice(6);
+		this.props.tossDice(dieOneValue);
 	};
 
 	diceRender = () => {
